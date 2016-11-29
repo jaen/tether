@@ -452,7 +452,7 @@ function within(a, b) {
 }
 
 var transformKey = (function () {
-  if (typeof document === 'undefined') {
+  if (typeof document === 'undefined' || typeof document.createElement === 'undefined') {
     return '';
   }
   var el = document.createElement('div');

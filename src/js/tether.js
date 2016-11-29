@@ -23,7 +23,7 @@ function within(a, b, diff=1) {
 }
 
 const transformKey = (() => {
-  if(typeof document === 'undefined') {
+  if(typeof document === 'undefined' || typeof document.createElement === 'undefined') {
     return '';
   }
   const el = document.createElement('div');
